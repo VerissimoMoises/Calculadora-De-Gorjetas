@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Calculadora para Restaurantes</title>
+  </head>
+  <body>
+    <main oninput="update()">
+      <h1>Calculadora para Restaurantes</h1>
+      <section>
+        <div class="valor">
+          <label for="valorDaConta">Conta:</label>
+          <input type="number" placeholder="Valor da Conta" id="valorDaConta" min="0"/>
+        </div>
+        <div>
+          <div class="space-between">
+            <label for="">Selecione a porcentagem</label>
+            <span id="porcentagem"></span>
+          </div>
+          <input type="range" value="0" id="barraPorcentagem" class="range"/>
+        </div>
+        <div class="space-between">
+          <span>Gorjeta:</span>
+          <span id="gorjeta"></span>
+        </div>
+        <hr/>
+        <div class="space-between total">
+          <span>Total</span>
+          <span id="totalComGorjeta"></span>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <div class="space-between">
+            <label for="inputDivisao">A divisão será feita por quantas pessoas?</label>
+            <span id="splitValue"></span>
+          </div>
+          <input type="range" min="1" max="10" value="1" id="inputDivisao" class="range"/>
+        </div>
+        <div class="space-between">
+          <span>Total para cada:</span>
+          <span id="valorParaCada"></span>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
